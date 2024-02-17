@@ -676,6 +676,7 @@ public class Login extends javax.swing.JFrame {
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         civil.setVisible(false);
         login.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void lastnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastnActionPerformed
