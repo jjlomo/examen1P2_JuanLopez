@@ -70,6 +70,7 @@ public class Login extends javax.swing.JFrame {
         combocodi = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        bienve = new javax.swing.JTextField();
         civil = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -87,7 +88,7 @@ public class Login extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
+        bienve1 = new javax.swing.JTextField();
         login = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -306,6 +307,8 @@ public class Login extends javax.swing.JFrame {
             .addGroup(empleLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bienve, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
@@ -316,7 +319,8 @@ public class Login extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(empleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bienve, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -449,6 +453,12 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        bienve1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bienve1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout civilLayout = new javax.swing.GroupLayout(civil.getContentPane());
         civil.getContentPane().setLayout(civilLayout);
         civilLayout.setHorizontalGroup(
@@ -469,7 +479,7 @@ public class Login extends javax.swing.JFrame {
                             .addGroup(civilLayout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(bienve1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         civilLayout.setVerticalGroup(
@@ -480,15 +490,15 @@ public class Login extends javax.swing.JFrame {
                         .addGap(58, 58, 58)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(civilLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addGap(8, 8, 8)
                         .addGroup(civilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(bienve1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -754,6 +764,10 @@ public class Login extends javax.swing.JFrame {
                         tablaCiviles.setModel(modelo);
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
+    private void bienve1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bienve1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bienve1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -797,6 +811,8 @@ int control;
 //        usuarios.add(new Civiles("Pepe", "Cruz", "cruces", "Femenino", "Comayagua",  new Date("9/9/2000")));
 //        usuarios.add(new Civiles("Mario", "Cropo", "mariobros", "Masculino", "Comayagua", new Date("8/10/2001")));
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField bienve;
+    private javax.swing.JTextField bienve1;
     private javax.swing.JDialog civil;
     private javax.swing.JComboBox<String> combocodi;
     private javax.swing.JComboBox<String> combodepa;
@@ -810,7 +826,6 @@ int control;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
