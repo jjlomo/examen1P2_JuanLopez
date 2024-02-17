@@ -727,8 +727,8 @@ public class Login extends javax.swing.JFrame {
         usuarios.get(control).setNombre(name1.getText());
         usuarios.get(control).setSexo((String)combosexo.getSelectedItem());
         usuarios.get(control).setDepartamento((String)combodepa.getSelectedItem());
-        usuarios.get(control).setId(usuarios.get(control).getId());
         usuarios.get(control).setNaci(naci1.getDate());
+        usuarios.get(control).setId(usuarios.get(control).getId());
         usuarios.get(control).setContraseña(password.getText());
         DefaultComboBoxModel model=(DefaultComboBoxModel)combocodi.getModel();
         model.removeAllElements();
