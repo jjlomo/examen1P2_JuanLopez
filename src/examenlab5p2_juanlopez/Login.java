@@ -579,10 +579,13 @@ public class Login extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         String name=nombre.getText();
         String pass=contra.getText();
+        nombre.setText("");
+        contra.setText("");
         for (int i = 0; i < usuarios.size(); i++) {
             if (name.contains(usuarios.get(i).getApellido())&&name.contains(usuarios.get(i).getNombre())) {
                 if(pass.equals(usuarios.get(i).getContraseña())){
                     if (usuarios.get(i)instanceof Empleados){
+                        
                         control=i;
                         DefaultTableModel modelo=(DefaultTableModel)tablaCiviles.getModel();
                         for (int j = 0; j < usuarios.size(); j++) {
@@ -595,10 +598,10 @@ public class Login extends javax.swing.JFrame {
                         tablaCiviles.setModel(modelo);
                         for (int x = 0; x < usuarios.size(); x++) {
                             if(usuarios.get(x)instanceof Civiles){
-                        DefaultTableModel model=(DefaultTableModel)tablaTram.getModel();
+                        DefaultTableModel model=(DefaultTableModel)tablaTram1.getModel();
                         for (int j = 0; j < ((Civiles)usuarios.get(x)).getTramite().size(); j++) {
                                                 Object [] objetos={((Civiles)usuarios.get(x)).getTramite().get(j).getNombre(), ((Civiles)usuarios.get(x)).getTramite().get(j).getDescripcion(), ((Civiles)usuarios.get(x)).getTramite().get(j).getFecha(),usuarios.get(x).getID()};
-                                                modelo.addRow(objetos);
+                                                model.addRow(objetos);
                         }
                             }
                     }
@@ -631,7 +634,7 @@ public class Login extends javax.swing.JFrame {
                         
                         tablaPersonal.setModel(modelo);
                         civil.setVisible(true);
-                        this.setVisible(false);
+//                        this.setVisible(false);
                         
                     }
                 }
@@ -669,14 +672,13 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTabbedPane2StateChanged
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        emple.setVisible(false);
-        login.setVisible(true);
+        civil.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        civil.setVisible(false);
-        login.setVisible(true);
-        this.setVisible(false);
+        emple.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void lastnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastnActionPerformed
