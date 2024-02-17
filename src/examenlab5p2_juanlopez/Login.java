@@ -592,7 +592,7 @@ public class Login extends javax.swing.JFrame {
             if (name.contains(usuarios.get(i).getApellido())&&name.contains(usuarios.get(i).getNombre())) {
                 if(pass.equals(usuarios.get(i).getContraseña())){
                     if (usuarios.get(i)instanceof Empleados){
-                        
+                        bienve.setText(name);
                         control=i;
                         DefaultTableModel modelo=(DefaultTableModel)tablaCiviles.getModel();
                         for (int j = 0; j < usuarios.size(); j++) {
@@ -633,6 +633,7 @@ public class Login extends javax.swing.JFrame {
         combocodi.setModel(model);
         
                     }else if(usuarios.get(i)instanceof Civiles){
+                        bienve1.setText(name);
                         control=i;
                         DefaultTableModel modelo=(DefaultTableModel)tablaPersonal.getModel();
                                 SimpleDateFormat sd=new SimpleDateFormat("dd/MMM/yyyy");
