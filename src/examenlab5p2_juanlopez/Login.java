@@ -106,6 +106,12 @@ public class Login extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
+
         tablaCiviles.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -724,7 +730,29 @@ public class Login extends javax.swing.JFrame {
         usuarios.get(control).setId(usuarios.get(control).getId());
         usuarios.get(control).setNaci(naci1.getDate());
         usuarios.get(control).setContraseña(password.getText());
+        DefaultComboBoxModel model=(DefaultComboBoxModel)combocodi.getModel();
+        model.removeAllElements();
+         for (int p = 0; p < usuarios.size(); p++) {
+             if (usuarios.get(p)instanceof Civiles) {
+             model.addElement(usuarios.get(p).getID());
+             }
+         }
+         combocodi.setModel(model);
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        
+        DefaultTableModel modelo=(DefaultTableModel)tablaCiviles.getModel();
+        modelo.setRowCount(0);
+                        for (int j = 0; j < usuarios.size(); j++) {
+                            if (usuarios.get(j)instanceof Civiles) {
+                                SimpleDateFormat sd=new SimpleDateFormat("dd/MMM/yyyy");
+                                Object [] objetos={usuarios.get(j).getNombre()+" "+usuarios.get(j).getApellido(), usuarios.get(j).getID(), sd.format(usuarios.get(j).getNaci())};
+                                modelo.addRow(objetos);
+                            }
+                        }
+                        tablaCiviles.setModel(modelo);
+    }//GEN-LAST:event_jTabbedPane1StateChanged
 
     /**
      * @param args the command line arguments
